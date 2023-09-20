@@ -1,5 +1,5 @@
 {% set name = "ryvencore" %}
-{% set version = "0.3.1.2" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ryvencore-{{ version }}.tar.gz
-  sha256: f2099923ceb28bc5effbbd0435623d700b259e460233638558a4cdcb41026d8b
+  sha256: ec8a722a1540f3c597d0cb6f132268d0fc89f65c79772ed2cdb2cdbde09b42ba
 
 build:
   number: 0
