@@ -1,11 +1,11 @@
-About ryvencore
-===============
+About ryvencore-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ryvencore-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/leon-thomm/ryvencore
 
 Package license: LGPL-2.1-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ryvencore-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python backend for node editor-like graph-based processing
 
