@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: ryvencore
+  version: "0.5.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ryvencore-${{ version }}.tar.gz
+  sha256: fdc09fcbedc42e62743e3a4255f0325ede47e44ab4ffe17168956ff03bc28e42
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - packaging
+
+tests:
+  - python:
+      imports:
+        - ryvencore
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  summary: Python backend for node editor-like graph-based processing
+  license: LGPL-2.1-only
+  license_file: LICENSE
+  homepage: https://github.com/leon-thomm/ryvencore
+
+extra:
+  recipe-maintainers:
+    - leon-thomm
+    - jan-janssen
